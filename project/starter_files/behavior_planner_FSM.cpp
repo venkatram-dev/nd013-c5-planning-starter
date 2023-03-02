@@ -78,8 +78,6 @@ double BehaviorPlannerFSM::get_look_ahead_distance(const State& ego_state) {
   // the distance you will need to come to a stop while traveling at speed V and
   // using a comfortable deceleration.
   // refer 28. Exercise: Velocity Profile Generation
-  // distance can be calculated using below formula
-  // d = (v_f^2 - v_i^2) / (2 * a)
   // final velocity = 0
   // also consider deceleration 
   
@@ -143,7 +141,6 @@ State BehaviorPlannerFSM::state_transition(const State& ego_state, State goal,
       // remember that we need to go back in the opposite direction of the
       // goal/road, i.e you should use: ang = goal.rotation.yaw + M_PI and then
       // use cosine and sine to get x and y
-      //
       // refer 16. Exercise: Boundary Conditions: Offset Goals
 
       auto ang = goal.rotation.yaw + M_PI;

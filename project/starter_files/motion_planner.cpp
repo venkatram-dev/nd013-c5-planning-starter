@@ -112,7 +112,6 @@ std::vector<State> MotionPlanner::generate_offset_goals(
     // calculated this direction above (yaw_plus_90). HINT: use
     // std::cos(yaw_plus_90) and std::sin(yaw_plus_90)
     // refer 16. Exercise : Boundary Conditions: Offset Goals
-    //goal_offset.location.x += offset * std::cos(yaw_plus_90);
     // use variable yaw calculated above in line 89
     goal_offset.location.x += offset * std::cos(yaw);  // <- Fix This
     goal_offset.location.y += offset * std::sin(yaw) ;  // <- Fix This
